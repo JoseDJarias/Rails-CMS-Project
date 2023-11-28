@@ -1,0 +1,1 @@
+link https://levelup.gitconnected.com/setting-up-mysql-with-ruby-on-rails-7-on-ubuntu-20-04-f6bbbb833db9
