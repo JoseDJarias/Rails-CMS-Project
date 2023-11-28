@@ -1,1 +1,3 @@
-link https://levelup.gitconnected.com/setting-up-mysql-with-ruby-on-rails-7-on-ubuntu-20-04-f6bbbb833db9
+link mysql config https://levelup.gitconnected.com/setting-up-mysql-with-ruby-on-rails-7-on-ubuntu-20-04-f6bbbb833db9
+
+bootstrap https://medium.com/@gjuliao32/installing-bootstrap-rails-7-a-step-by-step-guide-0fc4a843d94f
