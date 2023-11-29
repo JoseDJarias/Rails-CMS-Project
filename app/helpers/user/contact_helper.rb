@@ -1,0 +1,2 @@
+module User::ContactHelper
+end
