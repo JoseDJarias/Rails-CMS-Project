@@ -9,4 +9,3 @@
 
 #   end
 
-Prueba.new(datorandom:'Hola soy un dato random')

@@ -1,3 +1,10 @@
 link mysql config https://levelup.gitconnected.com/setting-up-mysql-with-ruby-on-rails-7-on-ubuntu-20-04-f6bbbb833db9
 
+allow remote connetions: https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
+
 bootstrap https://medium.com/@gjuliao32/installing-bootstrap-rails-7-a-step-by-step-guide-0fc4a843d94f
+
+Docker:
+Contenedor con docker https://platzi.com/tutoriales/1432-docker-2018/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/
+Database yml config https://stackoverflow.com/questions/5872264/correct-mysql-configuration-for-ruby-on-rails-database-yml-file
+
