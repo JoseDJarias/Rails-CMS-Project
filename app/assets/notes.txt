@@ -17,3 +17,5 @@ Secrets to Credentials https://www.shakacode.com/blog/rails-7-1-removes-secret-s
 
 secret key:68ec29b007f2288c83fbb591896424e3ac5b6fc250fe02c9e5f9655a40edd1c98ec5443b1d54440ada0524c9928cdc0987dd0e48d42c42c3bdf67e37b3fdef86
 Production Master Key with stripe example : https://web-crunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials
+
+Devise : https://github.com/heartcombo/devise#getting-started
