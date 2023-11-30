@@ -1,0 +1,19 @@
+link mysql config https://levelup.gitconnected.com/setting-up-mysql-with-ruby-on-rails-7-on-ubuntu-20-04-f6bbbb833db9
+
+allow remote connetions: https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
+
+bootstrap https://medium.com/@gjuliao32/installing-bootstrap-rails-7-a-step-by-step-guide-0fc4a843d94f
+
+Docker:
+Contenedor con docker https://platzi.com/tutoriales/1432-docker-2018/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/
+Database yml config https://stackoverflow.com/questions/5872264/correct-mysql-configuration-for-ruby-on-rails-database-yml-file
+
+
+
+
+
+Rails: 
+Secrets to Credentials https://www.shakacode.com/blog/rails-7-1-removes-secret-setup-command-and-deprecates-secret-show-edit-commands/
+
+secret key:68ec29b007f2288c83fbb591896424e3ac5b6fc250fe02c9e5f9655a40edd1c98ec5443b1d54440ada0524c9928cdc0987dd0e48d42c42c3bdf67e37b3fdef86
+Production Master Key with stripe example : https://web-crunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials
