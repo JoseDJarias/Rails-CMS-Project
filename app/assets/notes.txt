@@ -19,3 +19,4 @@ secret key:68ec29b007f2288c83fbb591896424e3ac5b6fc250fe02c9e5f9655a40edd1c98ec54
 Production Master Key with stripe example : https://web-crunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials
 
 Devise : https://github.com/heartcombo/devise#getting-started
+Devise: https://github.com/heartcombo/devise#configuring-views
