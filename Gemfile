@@ -71,3 +71,7 @@ group :test do
 end
 
 gem 'devise'
+
+  gem 'pry-remote'
+  gem 'pry-nav'
+  gem 'pry', '~> 0.14.2'

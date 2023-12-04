@@ -14,6 +14,7 @@ class Admin::SkillsController < ApplicationController
 
   def new
     @skill = Skill.new    
+
     @skill_soft_type = Skill.where(skill_type: ["soft"])
     @skill_hard_type = Skill.where(skill_type: ["hard"])
 
@@ -22,12 +23,13 @@ class Admin::SkillsController < ApplicationController
   # Contact.create(id:id,contact_name:'Kia',contact_email:'e@gmail.com',contact_option:'hire',contact_message:'HOla',admin_id:1)
 
   def create
+    # binding.pry
     @skill = Skill.new(skill_params)
 
     if @skill.save
     #  se guardo el animal
       flash[:notice] = 'A new skill has been created!'
-      redirect_to @skill
+      redirect_to admin_skills_path
     else
 
       flash[:error] = 'Error can not create the skill!'
@@ -59,9 +61,13 @@ class Admin::SkillsController < ApplicationController
     private
     # capturar los parametros
     def skill_params
-
-      params.require(:skill).permit(:skill_type, :skill_description, :admin_id)
-      
+      # params.require(:skill).permit(:skill_type, :skill_description, :admin_id)
+      new_params = {
+        skill_type: params[:skill_type],
+        skill_description: params[:skill_description],
+        admin_id:params[:admin_id]
+      }
+      new_params
     end
 
      

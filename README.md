@@ -6,6 +6,7 @@ application up and running.
 Author: Jose Daniel Arias Jaen
 Professor: Jose 
 Institute: FWD
+Stack: RoR 
 Start Date: 27/11/23
 End date: incompleted yet
 Disclouser: This is a Control Managment Version where a admin can show his portafolio to thw world using rails 7.2 and activr support alongside the project with two main namespaces admin and user
@@ -19,6 +20,7 @@ Rails 7.2
 * System dependencies
 gem rspec for testing
 gem devise for auth and authen
+binding pry (debugger)
 * Configuration
 
 * Database creation
