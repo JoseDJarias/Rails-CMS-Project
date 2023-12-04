@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_04_020020) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_033741) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -30,6 +30,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_020020) do
     t.string "contact_message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_contacts_on_admin_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -41,6 +43,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_020020) do
     t.string "project_end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_projects_on_admin_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -48,6 +52,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_020020) do
     t.string "skill_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_skills_on_admin_id"
   end
 
+  add_foreign_key "contacts", "admins"
+  add_foreign_key "projects", "admins"
+  add_foreign_key "skills", "admins"
 end

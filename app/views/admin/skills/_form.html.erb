@@ -1,0 +1,55 @@
+<div class='flash-error'>
+        <% if flash[:error].present?%>
+            <%= flash[:error]%>
+        <% end %>
+</div>
+
+
+<% if skill.blank? %>
+    <strong>No hay skills aun</strong>
+
+    <% elsif view == 'new' %>
+    <section  class= 'form-skills'>
+
+    <%= form_with model: @admin_skill do |skill_form| %>
+
+        <%# <%= skill_form.label :type 
+        <%= skill_form.text_field :skill_type%>   
+        <%= label_tag :skill_type, "Skill Type" %>
+        <%= select_tag :skill_type, options_for_select(["soft", "hard"], @admin_skill&.skill_type), include_blank: true %>
+
+        <% if @skill.errors[:skill_type].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:skill_type].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+        <% end %>
+        <br>
+        <br>
+        <%= skill_form.label :description %>
+        <%= skill_form.text_field :skill_description %>
+
+    <% if @skill.errors[:skill_description].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:skill_description].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <br>
+        <br>
+        <%= skill_form.submit%>
+
+        <%# <script src=application.js> </script> %>
+
+            <% end  %>
+
+    </section>
+
+<% else %>
+
+    <h1>Hola</h1>
+
+<% end%>    
+

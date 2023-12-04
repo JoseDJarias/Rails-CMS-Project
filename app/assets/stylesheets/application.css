@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+   background-color:darkslategray;
+   color: black;
+ }
+ .error-list{
+    color: red;
+ }
+/* admind skills */
+.admin-skill-title{
+   height: fit-content;
+   width: 400px;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+ .skill-list{
+   display: flex;
+   height: 200px;
+   width: 600px;
+   margin: 0 auto;
+   margin-top: 2%;
+ }
+ .ul-skill-list{
+   margin: 2%;
+ }
+ /* admind skills */
+
+ /* form skills */
+ .form-skills{
+   height: 120px;
+   width: 400px;
+   margin: 0 auto;
+ }
+ /* form skills */
+ 
+ 
+ /* user  skill classes */
+ .user-main-skill{
+    height:max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+   }
+   .user-title-skill{
+      margin: 0;
+   }
+/* user  skill classes */

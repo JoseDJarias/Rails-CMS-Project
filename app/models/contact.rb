@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-    belongs_to :admins
+    belongs_to :admin
 
     # Fields required
     validates_presence_of :contact_name
