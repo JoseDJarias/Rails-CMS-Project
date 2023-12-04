@@ -14,12 +14,9 @@ class Admin::SkillsController < ApplicationController
 
   def new
     @skill = Skill.new    
-    @skill.admin_id = 1
     @skill_soft_type = Skill.where(skill_type: ["soft"])
     @skill_hard_type = Skill.where(skill_type: ["hard"])
 
-    # @skill.admin.build
-    # @adm =Admin.all.pluck(:id)
   end  
 
   # Contact.create(id:id,contact_name:'Kia',contact_email:'e@gmail.com',contact_option:'hire',contact_message:'HOla',admin_id:1)
@@ -41,7 +38,6 @@ class Admin::SkillsController < ApplicationController
   end
 
   def edit
-
     @skill = Skill.find(params[:id])
   end
 
@@ -64,7 +60,7 @@ class Admin::SkillsController < ApplicationController
     # capturar los parametros
     def skill_params
 
-      params.require(:skill).permit(:skill_type, :skill_description, admins_attributes:[:admin_id])
+      params.require(:skill).permit(:skill_type, :skill_description, :admin_id)
       
     end
 

@@ -11,13 +11,10 @@
     <% elsif view == 'new' %>
     <section  class= 'form-skills'>
 
-    <%= form_with model: @admin_skill do |skill_form| %>
+    <%= form_with(model: @admin_skill, url: admin_skills_path) do |skill_form| %>
 
-        <%# <%= skill_form.label :type 
-        <%= skill_form.text_field :skill_type%>   
         <%= label_tag :skill_type, "Skill Type" %>
-        <%= select_tag :skill_type, options_for_select(["soft", "hard"], @admin_skill&.skill_type), include_blank: true %>
-
+        <%= skill_form.select :skill_type, options_for_select([['soft'], ['hard']]) %>
         <% if @skill.errors[:skill_type].present?%>
         <ul class = 'error-list'>
             <%@skill.errors[:skill_type].each do | error_message| %>
@@ -39,6 +36,18 @@
     <% end %>
         <br>
         <br>
+
+        
+        <%= skill_form.label :id %>
+        <%= skill_form.text_field :admin_id %>
+
+    <% if @skill.errors[:admin_id].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:admin_id].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
         <%= skill_form.submit%>
 
         <%# <script src=application.js> </script> %>
@@ -49,7 +58,52 @@
 
 <% else %>
 
-    <h1>Hola</h1>
+<section  class= 'form-skills'>
+
+    <%= form_with(model: @admin_skill, url: admin_skills_path) do |skill_form| %>
+
+        <%= label_tag :skill_type, "Skill Type" %>
+        <%= skill_form.select :skill_type, options_for_select([['soft'], ['hard']]) %>
+        <% if @skill.errors[:skill_type].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:skill_type].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+        <% end %>
+        <br>
+        <br>
+        <%= skill_form.label :description %>
+        <%= skill_form.text_field :skill_description %>
+
+    <% if @skill.errors[:skill_description].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:skill_description].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <br>
+        <br>
+
+        
+        <%= skill_form.label :id %>
+        <%= skill_form.text_field :admin_id %>
+
+    <% if @skill.errors[:admin_id].present?%>
+        <ul class = 'error-list'>
+            <%@skill.errors[:admin_id].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <%= skill_form.submit%>
+
+        <%# <script src=application.js> </script> %>
+
+            <% end  %>
+
+    </section>
 
 <% end%>    
 

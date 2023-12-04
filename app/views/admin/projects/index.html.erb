@@ -1,2 +1,23 @@
 <h1>Admin::Projects#index</h1>
 <p>Find me in app/views/admin/projects/index.html.erb</p>
+
+<main>
+
+<section class='admin-project-menu'>
+    <h2>Options</h2>
+     <%=  link_to 'Create',  new_admin_project_path  %> 
+     <br> <br>
+    
+    <% @projects.each do |project| %>
+      <%= link_to 'Edit', edit_admin_project_path(project) %>
+      <br> <br>
+    <% end %>     
+    
+    
+    <br> <br>
+
+
+
+</section>
+
+</main>

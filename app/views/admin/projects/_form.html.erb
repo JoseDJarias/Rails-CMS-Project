@@ -1,0 +1,199 @@
+<div class='flash-error'>
+        <% if flash[:error].present?%>
+            <%= flash[:error]%>
+        <% end %>
+</div>
+
+
+<% if project.blank? %>
+    <strong>No hay projects aun</strong>
+
+    <% elsif view == 'new' %>
+<section  class= ''>
+
+    <%= form_with(model: @admin_project, url: admin_projects_path) do |project_form| %>
+
+        <%= project_form.label :name %>
+        <%= project_form.text_field :project_name %>
+
+    <% if @project.errors[:project_name].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_name].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+        <%= project_form.label :description %>
+        <%= project_form.text_field :project_description %>
+
+    <% if @project.errors[:project_description].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_description].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <br>
+        <br>
+
+        <%= project_form.label :stack %>
+        <%= project_form.text_field :project_stack %>
+
+    <% if @project.errors[:project_stack].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_stack].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :task %>
+        <%= project_form.text_field :project_task %>
+
+    <% if @project.errors[:project_task].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_task].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :start %>
+        <%= project_form.text_field :project_start_date %>
+
+    <% if @project.errors[:project_start_date].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_start_date].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :end %>
+        <%= project_form.text_field :project_end_date %>
+
+    <% if @project.errors[:project_end_date].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_end_date].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        
+        <%= project_form.label :id %>
+        <%= project_form.text_field :admin_id %>
+
+    <% if @project.errors[:admin_id].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:admin_id].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <%= project_form.submit%>
+
+
+            <% end  %>
+
+</section>
+
+<% else %>
+
+<section  class= ''>
+
+    <%= form_with(model: @admin_project, url: admin_projects_path) do |project_form| %>
+
+        <%= project_form.label :name %>
+        <%= project_form.text_field :project_name %>
+
+    <% if @project.errors[:project_name].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_name].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+        <%= project_form.label :description %>
+        <%= project_form.text_field :project_description %>
+
+    <% if @project.errors[:project_description].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_description].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <br>
+        <br>
+
+        <%= project_form.label :stack %>
+        <%= project_form.text_field :project_stack %>
+
+    <% if @project.errors[:project_stack].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_stack].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :task %>
+        <%= project_form.text_field :project_task %>
+
+    <% if @project.errors[:project_task].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_task].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :start %>
+        <%= project_form.text_field :project_start_date %>
+
+    <% if @project.errors[:project_start_date].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_start_date].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+
+
+        <%= project_form.label :end %>
+        <%= project_form.text_field :project_end_date %>
+
+    <% if @project.errors[:project_end_date].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:project_end_date].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        
+        <%= project_form.label :id %>
+        <%= project_form.text_field :admin_id %>
+
+    <% if @project.errors[:admin_id].present?%>
+        <ul class = 'error-list'>
+            <%@project.errors[:admin_id].each do | error_message| %>
+                <li> <%= error_message%> </li>
+            <% end%>
+        </ul> 
+    <% end %>
+        <%= project_form.submit%>
+
+
+            <% end  %>
+
+</section>
+
+<% end%>    
+

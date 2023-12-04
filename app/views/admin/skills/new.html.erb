@@ -1,16 +1,8 @@
 <h1 class='admin-skill-title'>Create New Skill!</h1>
 
-<div class='flash-error'>
-    <% if flash[:error].present?%>
-        <%= flash[:error]%>
-    <% end %>
-</div>
-
-
 <%= render partial: 'form', locals: { skill: @skill, view: 'new' } %>
 
 <section class='skill-list'>
-
 
     <ul class='ul-skill-list'>
 

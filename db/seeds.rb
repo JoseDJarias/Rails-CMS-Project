@@ -8,4 +8,5 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Skill.create(skill_type:'soft', skill_description:'Respect')
+Skill.create(skill_type:'soft', skill_description:'Respect',admin_id:1)
+Project.create(project_name:'REAct projects', project_description:'JJajajaj', project_stack:'RoR', project_task:'MAking api and stiff',project_start_date:2023/11/23, project_end_date:2023/12/23, admin_id:1)
