@@ -1,0 +1,12 @@
+class Skill < ApplicationRecord
+    belongs_to :admins
+
+    # Fields required
+    validates_presence_of :skill_type
+    validates_presence_of :skill_description
+
+    scope :soft_skills_only, -> {where(skill_type:'soft')}
+    scope :hard_skills_only, -> {where(skill_type:'hard')}
+
+
+end

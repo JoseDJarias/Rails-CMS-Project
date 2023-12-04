@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   namespace :user do
-    resources :user, only: [:index, :show]
+    resources :about,:skills, :projects, :contacts ,only: [:index, :show]
   end
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

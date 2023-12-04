@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_30_200216) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_020020) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -21,6 +21,33 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_200216) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "contact_name"
+    t.string "contact_email"
+    t.string "contact_option"
+    t.string "contact_message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_description"
+    t.string "project_stack"
+    t.string "project_task"
+    t.string "project_start_date"
+    t.string "project_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "skill_type"
+    t.string "skill_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
