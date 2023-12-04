@@ -1,4 +1,6 @@
 class Admin::SkillsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @skills = Skill.all
 
